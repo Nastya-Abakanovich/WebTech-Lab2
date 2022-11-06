@@ -4,46 +4,46 @@ package by.bsuir.lab2.entity;
 import java.io.Serializable;
 
 public class Appliance implements Serializable {
-    private String CompanyName;
-    private String ModelName;
-    private double Price;
-    private double WarrantyTime;
+    private String companyName;
+    private String modelName;
+    private double price;
+    private double warrantyTime;
 
     public Appliance() {
-        this.CompanyName = "";
-        this.ModelName = "";
-        this.Price = 0.0;
-        this.WarrantyTime = 0.0;
+        this.companyName = "";
+        this.modelName = "";
+        this.price = 0.0;
+        this.warrantyTime = 0.0;
     }
 
     public Appliance(Appliance appliance) {
-        this.CompanyName = appliance.getCompanyName();
-        this.ModelName = appliance.getModelName();
-        this.Price = appliance.getPrice();
-        this.WarrantyTime = appliance.getWarrantyTime();
+        this.companyName = appliance.getCompanyName();
+        this.modelName = appliance.getModelName();
+        this.price = appliance.getPrice();
+        this.warrantyTime = appliance.getWarrantyTime();
     }
 
     public Appliance(String companyName, String modelName, double price, double warrantyTime) {
-        this.CompanyName = companyName;
-        this.ModelName = modelName;
-        this.Price = price;
-        this.WarrantyTime = warrantyTime;
+        this.companyName = companyName;
+        this.modelName = modelName;
+        this.price = price;
+        this.warrantyTime = warrantyTime;
     }
 
     public String getCompanyName() {
-        return this.CompanyName;
+        return this.companyName;
     }
 
     public String getModelName() {
-        return this.ModelName;
+        return this.modelName;
     }
 
     public double getPrice() {
-        return this.Price;
+        return this.price;
     }
 
     public double getWarrantyTime() {
-        return this.WarrantyTime;
+        return this.warrantyTime;
     }
 
 }

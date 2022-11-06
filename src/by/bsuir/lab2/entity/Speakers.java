@@ -2,55 +2,55 @@ package by.bsuir.lab2.entity;
 
 
 public class Speakers extends Appliance {
-    private double PowerConsumption;
-    private int NumberOfSpeakers;
-    private int MaxFrequencyRange;
-    private double CordLength;
+    private double powerConsumption;
+    private int numberOfSpeakers;
+    private int maxFrequencyRange;
+    private double cordLength;
 
     public Speakers() {
-        this.PowerConsumption = 0.0;
-        this.NumberOfSpeakers = 0;
-        this.MaxFrequencyRange = 0;
-        this.CordLength = 0.0;
+        this.powerConsumption = 0.0;
+        this.numberOfSpeakers = 0;
+        this.maxFrequencyRange = 0;
+        this.cordLength = 0.0;
     }
 
     public Speakers(Speakers speakers) {
         super(speakers.getCompanyName(), speakers.getModelName(), speakers.getPrice(), speakers.getWarrantyTime());
-        this.PowerConsumption = speakers.getPowerConsumption();
-        this.NumberOfSpeakers = speakers.getNumberOfSpeakers();
-        this.MaxFrequencyRange = speakers.getMaxFrequencyRange();
-        this.CordLength = speakers.getCordLength();
+        this.powerConsumption = speakers.getPowerConsumption();
+        this.numberOfSpeakers = speakers.getNumberOfSpeakers();
+        this.maxFrequencyRange = speakers.getMaxFrequencyRange();
+        this.cordLength = speakers.getCordLength();
     }
 
     public Speakers(Appliance appliance, double powerConsumption, int numberOfSpeakers, int maxFrequencyRange, double cordLength) {
         super(appliance);
-        this.PowerConsumption = powerConsumption;
-        this.NumberOfSpeakers = numberOfSpeakers;
-        this.MaxFrequencyRange = maxFrequencyRange;
-        this.CordLength = cordLength;
+        this.powerConsumption = powerConsumption;
+        this.numberOfSpeakers = numberOfSpeakers;
+        this.maxFrequencyRange = maxFrequencyRange;
+        this.cordLength = cordLength;
     }
 
     public Speakers(String companyName, String modelName, double price, double warrantyTime, double powerConsumption, int numberOfSpeakers, int maxFrequencyRange, double cordLength) {
         super(companyName, modelName, price, warrantyTime);
-        this.PowerConsumption = powerConsumption;
-        this.NumberOfSpeakers = numberOfSpeakers;
-        this.MaxFrequencyRange = maxFrequencyRange;
-        this.CordLength = cordLength;
+        this.powerConsumption = powerConsumption;
+        this.numberOfSpeakers = numberOfSpeakers;
+        this.maxFrequencyRange = maxFrequencyRange;
+        this.cordLength = cordLength;
     }
 
     public double getPowerConsumption() {
-        return this.PowerConsumption;
+        return this.powerConsumption;
     }
 
     public int getNumberOfSpeakers() {
-        return this.NumberOfSpeakers;
+        return this.numberOfSpeakers;
     }
 
     public int getMaxFrequencyRange() {
-        return this.MaxFrequencyRange;
+        return this.maxFrequencyRange;
     }
 
     public double getCordLength() {
-        return this.CordLength;
+        return this.cordLength;
     }
 }

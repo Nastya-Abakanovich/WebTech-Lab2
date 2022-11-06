@@ -2,56 +2,56 @@ package by.bsuir.lab2.entity;
 
 
 public class Kettle extends Appliance {
-    private double Volume;
-    private double PowerConsumption;
-    private double CordLength;
-    private double Weight;
+    private double volume;
+    private double powerConsumption;
+    private double cordLength;
+    private double weight;
 
     public Kettle() {
-        this.Volume = 0.0;
-        this.PowerConsumption = 0.0;
-        this.CordLength = 0.0;
-        this.Weight = 0.0;
+        this.volume = 0.0;
+        this.powerConsumption = 0.0;
+        this.cordLength = 0.0;
+        this.weight = 0.0;
     }
 
     public Kettle(Kettle kettle) {
         super(kettle.getCompanyName(), kettle.getModelName(), kettle.getPrice(), kettle.getWarrantyTime());
-        this.Volume = kettle.getVolume();
-        this.PowerConsumption = kettle.getPowerConsumption();
-        this.CordLength = kettle.getCordLength();
-        this.Weight = kettle.getWeight();
+        this.volume = kettle.getVolume();
+        this.powerConsumption = kettle.getPowerConsumption();
+        this.cordLength = kettle.getCordLength();
+        this.weight = kettle.getWeight();
     }
 
     public Kettle(Appliance appliance, double volume, double capacity, double cordLength, double weight) {
         super(appliance);
-        this.Volume = volume;
-        this.PowerConsumption = capacity;
-        this.CordLength = cordLength;
-        this.Weight = weight;
+        this.volume = volume;
+        this.powerConsumption = capacity;
+        this.cordLength = cordLength;
+        this.weight = weight;
     }
 
     public Kettle(String companyName, String modelName, double price, double warrantyTime, double volume, double capacity, double cordLength, double weight) {
         super(companyName, modelName, price, warrantyTime);
-        this.Volume = volume;
-        this.PowerConsumption = capacity;
-        this.CordLength = cordLength;
-        this.Weight = weight;
+        this.volume = volume;
+        this.powerConsumption = capacity;
+        this.cordLength = cordLength;
+        this.weight = weight;
     }
 
     public double getVolume() {
-        return this.Volume;
+        return this.volume;
     }
 
     public double getPowerConsumption() {
-        return this.PowerConsumption;
+        return this.powerConsumption;
     }
 
     public double getCordLength() {
-        return this.CordLength;
+        return this.cordLength;
     }
 
     public double getWeight() {
-        return this.Weight;
+        return this.weight;
     }
 }
 

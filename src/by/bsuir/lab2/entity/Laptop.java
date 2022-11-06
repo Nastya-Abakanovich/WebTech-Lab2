@@ -2,74 +2,74 @@ package by.bsuir.lab2.entity;
 
 
 public class Laptop extends Appliance {
-    private double BatteryCapacity;
-    private String OS;
-    private int MemoryRom;
-    private int SystemMemory;
-    private double CPU;
-    private double DisplayInchs;
+    private double batteryCapacity;
+    private String os;
+    private int memoryRom;
+    private int systemMemory;
+    private double cpu;
+    private double displayInchs;
 
     public Laptop() {
-        this.BatteryCapacity = 0.0;
-        this.OS = "";
-        this.MemoryRom = 0;
-        this.SystemMemory = 0;
-        this.CPU = 0.0;
-        this.DisplayInchs = 0.0;
+        this.batteryCapacity = 0.0;
+        this.os = "";
+        this.memoryRom = 0;
+        this.systemMemory = 0;
+        this.cpu = 0.0;
+        this.displayInchs = 0.0;
     }
 
     public Laptop(Laptop laptop) {
         super(laptop.getCompanyName(), laptop.getModelName(), laptop.getPrice(), laptop.getWarrantyTime());
-        this.BatteryCapacity = laptop.getBatteryCapacity();
-        this.OS = laptop.getOS();
-        this.MemoryRom = laptop.getMemoryRom();
-        this.SystemMemory = laptop.getSystemMemory();
-        this.CPU = laptop.getCPU();
-        this.DisplayInchs = laptop.getDisplayInchs();
+        this.batteryCapacity = laptop.getBatteryCapacity();
+        this.os = laptop.getOs();
+        this.memoryRom = laptop.getMemoryRom();
+        this.systemMemory = laptop.getSystemMemory();
+        this.cpu = laptop.getCpu();
+        this.displayInchs = laptop.getDisplayInchs();
     }
 
     public Laptop(Appliance appliance, double batteryCapacity, String OS, int memoryRom, int systemMemory, double CPU, double displayInchs) {
         super(appliance);
-        this.BatteryCapacity = batteryCapacity;
-        this.OS = OS;
-        this.MemoryRom = memoryRom;
-        this.SystemMemory = systemMemory;
-        this.CPU = CPU;
-        this.DisplayInchs = displayInchs;
+        this.batteryCapacity = batteryCapacity;
+        this.os = OS;
+        this.memoryRom = memoryRom;
+        this.systemMemory = systemMemory;
+        this.cpu = CPU;
+        this.displayInchs = displayInchs;
     }
 
     public Laptop(String companyName, String modelName, double price, double warrantyTime, double batteryCapacity, String OS, int memoryRom, int systemMemory, double CPU, double displayInchs) {
         super(companyName, modelName, price, warrantyTime);
-        this.BatteryCapacity = batteryCapacity;
-        this.OS = OS;
-        this.MemoryRom = memoryRom;
-        this.SystemMemory = systemMemory;
-        this.CPU = CPU;
-        this.DisplayInchs = displayInchs;
+        this.batteryCapacity = batteryCapacity;
+        this.os = OS;
+        this.memoryRom = memoryRom;
+        this.systemMemory = systemMemory;
+        this.cpu = CPU;
+        this.displayInchs = displayInchs;
     }
 
     public double getBatteryCapacity() {
-        return this.BatteryCapacity;
+        return this.batteryCapacity;
     }
 
-    public String getOS() {
-        return this.OS;
+    public String getOs() {
+        return this.os;
     }
 
     public int getMemoryRom() {
-        return this.MemoryRom;
+        return this.memoryRom;
     }
 
     public int getSystemMemory() {
-        return this.SystemMemory;
+        return this.systemMemory;
     }
 
-    public double getCPU() {
-        return this.CPU;
+    public double getCpu() {
+        return this.cpu;
     }
 
     public double getDisplayInchs() {
-        return this.DisplayInchs;
+        return this.displayInchs;
     }
 }
 

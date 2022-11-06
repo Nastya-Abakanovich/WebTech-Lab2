@@ -2,73 +2,73 @@ package by.bsuir.lab2.entity;
 
 
 public class Oven extends Appliance {
-    private double PowerConsumption;
-    private double Weight;
-    private double Capacity;
-    private double Depth;
-    private double Height;
-    private double Width;
+    private double powerConsumption;
+    private double weight;
+    private double capacity;
+    private double depth;
+    private double height;
+    private double width;
 
     public Oven() {
-        this.PowerConsumption = 0.0;
-        this.Weight = 0.0;
-        this.Capacity = 0.0;
-        this.Depth = 0.0;
-        this.Height = 0.0;
-        this.Width = 0.0;
+        this.powerConsumption = 0.0;
+        this.weight = 0.0;
+        this.capacity = 0.0;
+        this.depth = 0.0;
+        this.height = 0.0;
+        this.width = 0.0;
     }
 
     public Oven(Oven oven) {
         super(oven.getCompanyName(), oven.getModelName(), oven.getPrice(), oven.getWarrantyTime());
-        this.PowerConsumption = oven.getPowerConsumption();
-        this.Weight = oven.getWeight();
-        this.Capacity = oven.getCapacity();
-        this.Depth = oven.getDepth();
-        this.Height = oven.getHeight();
-        this.Width = oven.getWidth();
+        this.powerConsumption = oven.getPowerConsumption();
+        this.weight = oven.getWeight();
+        this.capacity = oven.getCapacity();
+        this.depth = oven.getDepth();
+        this.height = oven.getHeight();
+        this.width = oven.getWidth();
     }
 
     public Oven(Appliance appliance, double powerConsumption, double weight, double capacity, double depth, double height, double width) {
         super(appliance);
-        this.PowerConsumption = powerConsumption;
-        this.Weight = weight;
-        this.Capacity = capacity;
-        this.Depth = depth;
-        this.Height = height;
-        this.Width = width;
+        this.powerConsumption = powerConsumption;
+        this.weight = weight;
+        this.capacity = capacity;
+        this.depth = depth;
+        this.height = height;
+        this.width = width;
     }
 
     public Oven(String companyName, String modelName, double price, double warrantyTime, double powerConsumption, double weight, double capacity, double depth, double height, double width) {
         super(companyName, modelName, price, warrantyTime);
-        this.PowerConsumption = powerConsumption;
-        this.Weight = weight;
-        this.Capacity = capacity;
-        this.Depth = depth;
-        this.Height = height;
-        this.Width = width;
+        this.powerConsumption = powerConsumption;
+        this.weight = weight;
+        this.capacity = capacity;
+        this.depth = depth;
+        this.height = height;
+        this.width = width;
     }
 
     public double getPowerConsumption() {
-        return this.PowerConsumption;
+        return this.powerConsumption;
     }
 
     public double getWeight() {
-        return this.Weight;
+        return this.weight;
     }
 
     public double getCapacity() {
-        return this.Capacity;
+        return this.capacity;
     }
 
     public double getDepth() {
-        return this.Depth;
+        return this.depth;
     }
 
     public double getHeight() {
-        return this.Height;
+        return this.height;
     }
 
     public double getWidth() {
-        return this.Width;
+        return this.width;
     }
 }
