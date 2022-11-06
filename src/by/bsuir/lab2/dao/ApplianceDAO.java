@@ -7,4 +7,5 @@ import java.util.ArrayList;
 
 public interface ApplianceDAO {
     ArrayList<Appliance> find(Criteria var1);
+    ArrayList<Appliance> findByApplianceType(Class applianceType);
 }

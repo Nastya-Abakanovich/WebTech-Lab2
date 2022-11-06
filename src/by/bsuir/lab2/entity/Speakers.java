@@ -1,6 +1,9 @@
 package by.bsuir.lab2.entity;
 
 
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+
 public class Speakers extends Appliance {
     private double powerConsumption;
     private int numberOfSpeakers;
@@ -38,7 +41,30 @@ public class Speakers extends Appliance {
         this.cordLength = cordLength;
     }
 
-    public double getPowerConsumption() {
+    public Speakers(Node appliance) {
+        super(appliance);
+        NodeList nodes = appliance.getChildNodes();
+        for (int i = 0; i < nodes.getLength(); i++) {
+            String field = nodes.item(i).getNodeName();
+            String value = nodes.item(i).getTextContent();
+
+            switch (field) {
+                case "powerConsumption":
+                    powerConsumption = Double.parseDouble(value);
+                    break;
+                case "numberOfSpeakers":
+                    numberOfSpeakers = Integer.parseInt(value);
+                    break;
+                case "maxFrequencyRange":
+                    maxFrequencyRange = Integer.parseInt(value);
+                    break;
+                case "cordLength":
+                    cordLength = Double.parseDouble(value);
+                    break;
+            }
+        }
+    }
+        public double getPowerConsumption() {
         return this.powerConsumption;
     }
 

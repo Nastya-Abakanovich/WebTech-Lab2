@@ -1,6 +1,10 @@
 package by.bsuir.lab2.entity;
 
 
+import org.w3c.dom.Document;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+
 import java.io.Serializable;
 
 public class Appliance implements Serializable {
@@ -28,6 +32,35 @@ public class Appliance implements Serializable {
         this.modelName = modelName;
         this.price = price;
         this.warrantyTime = warrantyTime;
+    }
+
+    public Appliance(Node appliance) {
+        NodeList nodes = appliance.getChildNodes();
+        for (int i = 0; i < nodes.getLength(); i++) {
+            String field = nodes.item(i).getNodeName();
+            String value = nodes.item(i).getTextContent();
+
+            switch (field) {
+                case "companyName":
+                    companyName = value;
+                    break;
+                case "modelName":
+                    modelName = value;
+                    break;
+                case "price":
+                    price = Double.parseDouble(value);
+                    break;
+                case "warrantyTime":
+                    warrantyTime = Double.parseDouble(value);
+                    break;
+            }
+        }
+
+//        Document doc = appliance.getOwnerDocument();
+//        companyName = doc.getElementsByTagName("companyName").item(0).getTextContent();
+//        modelName = doc.getElementsByTagName("modelName").item(0).getFirstChild().getNodeValue();
+//        price = Double.parseDouble(doc.getElementsByTagName("price").item(0).getFirstChild().getNodeValue());
+//        warrantyTime = Double.parseDouble(doc.getElementsByTagName("warrantyTime").item(0).getFirstChild().getNodeValue());
     }
 
     public String getCompanyName() {

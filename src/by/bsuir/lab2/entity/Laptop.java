@@ -1,6 +1,9 @@
 package by.bsuir.lab2.entity;
 
 
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+
 public class Laptop extends Appliance {
     private double batteryCapacity;
     private String os;
@@ -48,7 +51,37 @@ public class Laptop extends Appliance {
         this.displayInchs = displayInchs;
     }
 
-    public double getBatteryCapacity() {
+    public Laptop(Node appliance) {
+        super(appliance);
+        NodeList nodes = appliance.getChildNodes();
+        for (int i = 0; i < nodes.getLength(); i++) {
+            String field = nodes.item(i).getNodeName();
+            String value = nodes.item(i).getTextContent();
+
+            switch (field) {
+                case "batteryCapacity":
+                    batteryCapacity = Double.parseDouble(value);
+                    break;
+                case "os":
+                    os = value;
+                    break;
+                case "memoryRom":
+                    memoryRom = Integer.parseInt(value);
+                    break;
+                case "systemMemory":
+                    systemMemory = Integer.parseInt(value);
+                    break;
+                case "cpu":
+                    cpu = Double.parseDouble(value);
+                    break;
+                case "displayInchs":
+                    displayInchs = Double.parseDouble(value);
+                    break;
+            }
+        }
+    }
+
+        public double getBatteryCapacity() {
         return this.batteryCapacity;
     }
 

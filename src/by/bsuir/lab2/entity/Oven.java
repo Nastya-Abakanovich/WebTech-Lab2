@@ -1,6 +1,9 @@
 package by.bsuir.lab2.entity;
 
 
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+
 public class Oven extends Appliance {
     private double powerConsumption;
     private double weight;
@@ -48,7 +51,37 @@ public class Oven extends Appliance {
         this.width = width;
     }
 
-    public double getPowerConsumption() {
+    public Oven(Node appliance) {
+        super(appliance);
+        NodeList nodes = appliance.getChildNodes();
+        for (int i = 0; i < nodes.getLength(); i++) {
+            String field = nodes.item(i).getNodeName();
+            String value = nodes.item(i).getTextContent();
+
+            switch (field) {
+                case "powerConsumption":
+                    powerConsumption = Double.parseDouble(value);
+                    break;
+                case "weight":
+                    weight = Double.parseDouble(value);
+                    break;
+                case "capacity":
+                    capacity = Double.parseDouble(value);
+                    break;
+                case "depth":
+                    depth = Double.parseDouble(value);
+                    break;
+                case "height":
+                    height = Double.parseDouble(value);
+                    break;
+                case "width":
+                    width = Double.parseDouble(value);
+                    break;
+            }
+        }
+    }
+
+        public double getPowerConsumption() {
         return this.powerConsumption;
     }
 
