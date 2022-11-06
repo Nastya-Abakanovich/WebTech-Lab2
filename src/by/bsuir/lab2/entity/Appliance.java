@@ -45,5 +45,6 @@ public class Appliance implements Serializable {
     public double getWarrantyTime() {
         return this.WarrantyTime;
     }
+
 }
 
