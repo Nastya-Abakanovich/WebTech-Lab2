@@ -5,10 +5,10 @@
         <numberOfSpeakers>2</numberOfSpeakers>
         <maxFrequencyRange>18000</maxFrequencyRange>
         <cordLength>2</cordLength>
-	<companyName>Defender</companyName>
-	<modelName>SPK-170</modelName>
+	    <companyName>Defender</companyName>
+	    <modelName>SPK-170</modelName>
         <price>13.99</price>
-	<warrantyTime>12</warrantyTime>
+	    <warrantyTime>12</warrantyTime>
     </appliance>
     <appliance>
         <type>Speakers</type>
@@ -16,10 +16,10 @@
         <numberOfSpeakers>2</numberOfSpeakers>
         <maxFrequencyRange>20000</maxFrequencyRange>
         <cordLength>1.3</cordLength>
-	<companyName>Dialog</companyName>
-	<modelName>AC-02UP</modelName>
+	    <companyName>Dialog</companyName>
+	    <modelName>AC-02UP</modelName>
         <price>14</price>
-	<warrantyTime>12</warrantyTime>
+	    <warrantyTime>12</warrantyTime>
     </appliance>
     <appliance>
         <type>Speakers</type>
@@ -27,10 +27,10 @@
         <numberOfSpeakers>6</numberOfSpeakers>
         <maxFrequencyRange>22000</maxFrequencyRange>
         <cordLength>1.8</cordLength>
-	<companyName>SVEN</companyName>
-	<modelName>HT-202</modelName>
+	    <companyName>SVEN</companyName>
+	    <modelName>HT-202</modelName>
         <price>279.79</price>
-	<warrantyTime>12</warrantyTime>
+	    <warrantyTime>12</warrantyTime>
     </appliance>
     <appliance>
         <type>Speakers</type>
@@ -38,10 +38,10 @@
         <numberOfSpeakers>6</numberOfSpeakers>
         <maxFrequencyRange>20000</maxFrequencyRange>
         <cordLength>2.5</cordLength>
-	<companyName>Edifier</companyName>
-	<modelName>R501BT</modelName>
+	    <companyName>Edifier</companyName>
+	    <modelName>R501BT</modelName>
         <price>1719,52</price>
-	<warrantyTime>12</warrantyTime>
+	    <warrantyTime>12</warrantyTime>
     </appliance>   
     <appliance>
         <type>Laptop</type>
@@ -49,12 +49,12 @@
         <os>Windows</os>
         <memoryROM>4000</memoryROM>
         <systemMemory>1000</systemMemory>
-        <CPU>1.2</CPU>
+        <cpu>1.2</cpu>
         <displayInchs>15.6</displayInchs>
-	<companyName>ASUS</companyName>
-	<modelName>TUF Gaming A15</modelName>
+	    <companyName>ASUS</companyName>
+	    <modelName>TUF Gaming A15</modelName>
         <price>3250</price>
-	<warrantyTime>12</warrantyTime>
+	    <warrantyTime>12</warrantyTime>
     </appliance>
     <appliance>
         <type>Laptop</type>
@@ -62,94 +62,94 @@
         <os>Linux</os>
         <memoryROM>8000</memoryROM>
         <systemMemory>2000</systemMemory>
-        <CPU>2</CPU>
+        <cpu>2</cpu>
         <displayInchs>18</displayInchs>
-	<companyName>Lenovo</companyName>
-	<modelName>V15 G2 ITL</modelName>
+	    <companyName>Lenovo</companyName>
+	    <modelName>V15 G2 ITL</modelName>
         <price>2499</price>
-	<warrantyTime>12</warrantyTime>
+	    <warrantyTime>12</warrantyTime>
     </appliance>
     <appliance>
         <type>Oven</type>
         <powerConsumption>3000</powerConsumption>
         <weight>38</weight>
-	<capacity>50</capacity>
-	<depth>0.56</depth>
-	<height>0.85</height>
-	<width>0.5</width>
-	<companyName>DARINA</companyName>
-	<modelName>B3321</modelName>
+        <capacity>50</capacity>
+        <depth>0.56</depth>
+        <height>0.85</height>
+        <width>0.5</width>
+        <companyName>DARINA</companyName>
+        <modelName>B3321</modelName>
         <price>579.61</price>
-	<warrantyTime>12</warrantyTime>
+        <warrantyTime>12</warrantyTime>
     </appliance>
     <appliance>
         <type>Oven</type>
         <powerConsumption>8400</powerConsumption>
         <weight>31</weight>
-	<capacity>50</capacity>
-	<depth>0.58</depth>
-	<height>0.85</height>
-	<width>0.5</width>
-	<companyName>Flama</companyName>
-	<modelName>RG24037</modelName>
+        <capacity>50</capacity>
+        <depth>0.58</depth>
+        <height>0.85</height>
+        <width>0.5</width>
+        <companyName>Flama</companyName>
+        <modelName>RG24037</modelName>
         <price>431.7</price>
-	<warrantyTime>12</warrantyTime>
+	    <warrantyTime>12</warrantyTime>
     </appliance>
     <appliance>
         <type>Oven</type>
         <powerConsumption>5000</powerConsumption>
         <weight>38.5</weight>
-	<capacity>42</capacity>
-	<depth>0.57</depth>
-	<height>0.85</height>
-	<width>0.5</width>
-	<companyName>Gefest</companyName>
-	<modelName>GS32W633</modelName>
+        <capacity>42</capacity>
+        <depth>0.57</depth>
+        <height>0.85</height>
+        <width>0.5</width>
+        <companyName>Gefest</companyName>
+        <modelName>GS32W633</modelName>
         <price>759.5</price>
-	<warrantyTime>24</warrantyTime>
+	    <warrantyTime>24</warrantyTime>
     </appliance>
     <appliance>
         <type>Kettle</type>
         <volume>1.7</volume>
         <powerConsumption>2400</powerConsumption>
-        <cordLenght>2</cordLenght>
+        <cordLength>2</cordLength>
         <weight>0.52</weight>
-	<companyName>Tefal</companyName>
-	<modelName>KO250130</modelName>
+	    <companyName>Tefal</companyName>
+	    <modelName>KO250130</modelName>
         <price>135.78</price>
-	<warrantyTime>24</warrantyTime>
+	    <warrantyTime>24</warrantyTime>
     </appliance>
     <appliance>
         <type>Kettle</type>
         <volume>1.8</volume>
         <powerConsumption>2200</powerConsumption>
-        <cordLenght>0.7</cordLenght>
+        <cordLength>0.7</cordLength>
         <weight>0.360</weight>
-	<companyName>Brayer</companyName>
-	<modelName>BR1013</modelName>
+	    <companyName>Brayer</companyName>
+	    <modelName>BR1013</modelName>
         <price>69.0</price>
-	<warrantyTime>24</warrantyTime>
+	    <warrantyTime>24</warrantyTime>
     </appliance>
     <appliance>
         <type>Kettle</type>
         <volume>1.7</volume>
         <powerConsumption>1850</powerConsumption>
-        <cordLenght>1.3</cordLenght>
+        <cordLength>1.3</cordLength>
         <weight>0.400</weight>
-	<companyName>Holt</companyName>
-	<modelName>HT-KT-007</modelName>
+	    <companyName>Holt</companyName>
+	    <modelName>HT-KT-007</modelName>
         <price>39.0</price>
-	<warrantyTime>12</warrantyTime>
+	    <warrantyTime>12</warrantyTime>
     </appliance>
     <appliance>
         <type>Kettle</type>
         <volume>2.2</volume>
         <powerConsumption>2200</powerConsumption>
-        <cordLenght>1.5</cordLenght>
+        <cordLength>1.5</cordLength>
         <weight>0.415</weight>
-	<companyName>Scarlett</companyName>
-	<modelName>SC-1020</modelName>
+	    <companyName>Scarlett</companyName>
+	    <modelName>SC-1020</modelName>
         <price>73.21</price>
-	<warrantyTime>12</warrantyTime>
+	    <warrantyTime>12</warrantyTime>
     </appliance>
 </applicances>
