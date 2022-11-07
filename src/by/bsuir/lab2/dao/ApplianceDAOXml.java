@@ -7,31 +7,27 @@ import org.xml.sax.SAXException;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
-import java.beans.Expression;
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 
-public class ApplianceDAOImpl implements ApplianceDAO {
+/**
+ * Implementing an interface {@link ApplianceDAO} for accessing data in XML file.
+ */
+public class ApplianceDAOXml implements ApplianceDAO {
 
     private static final String XML_PATH = "src/by/bsuir/lab2/resources/appliance.xml";
     private Document xmlDocument;
 
-    public ApplianceDAOImpl() {
+    public ApplianceDAOXml() {
         xmlDocument = getDocument();
     }
 
-    private Document getDocument() {
-        Document document = null;
-        try {
-            DocumentBuilder documentBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
-            document = documentBuilder.parse(XML_PATH);
-        } catch (ParserConfigurationException | SAXException | IOException ex) {
-            ex.printStackTrace(System.out);
-        }
-        return document;
-    }
-
+    /**
+     * Finds all appliances of the selected type in the XML.
+     * @param applianceType Appliance type to search.
+     * @return List of found appliances.
+     */
     public ArrayList<Appliance> findByApplianceType(Class applianceType) {
         ArrayList<Appliance> findAppliances = new ArrayList<>();
         NodeList types = xmlDocument.getDocumentElement().getElementsByTagName("type");
@@ -48,26 +44,41 @@ public class ApplianceDAOImpl implements ApplianceDAO {
                 } catch (InstantiationException | IllegalAccessException | InvocationTargetException | NoSuchMethodException e) {
                     throw new RuntimeException(e);
                 }
-
                 findAppliances.add((Appliance) currAppliance);
             }
-
         }
         return findAppliances;
     }
 
-    interface Comparison{
-        boolean comp(double a, double b);
-    }
+    /**
+     * Finds the cheapest appliances of any type in the XML.
+     * @return List of found appliances.
+     */
     public ArrayList<Appliance> findTheCheapestAppliance() {
         return findMaxOrMinPrice((x, y) -> x < y);
     }
 
+    /**
+     * Finds the most expensive appliances of any type in the XML.
+     * @return List of found appliances.
+     */
     public ArrayList<Appliance> findTheMostExpensiveAppliance() {
         return findMaxOrMinPrice((x, y) -> x > y);
     }
 
-    private ArrayList<Appliance> findMaxOrMinPrice(Comparison comparison) {
+    /**
+     * Interface for passing a lambda expression to a method.
+     */
+    private interface Expressions {
+        boolean compare(double a, double b);
+    }
+
+    /**
+     * Finds the appliances with min ar max price of any type in the XML.
+     * @param expressions lambda expression for compare.
+     * @return List of found appliances.
+     */
+    private ArrayList<Appliance> findMaxOrMinPrice(Expressions expressions) {
         ArrayList<Appliance> findAppliances = new ArrayList<>();
         NodeList prices = xmlDocument.getDocumentElement().getElementsByTagName("price");
         Node appliance;
@@ -77,11 +88,10 @@ public class ApplianceDAOImpl implements ApplianceDAO {
         for (int i = 1; i < prices.getLength(); i++) {
             try {
                 currPrice = Double.parseDouble(prices.item(i).getTextContent());
-                if (comparison.comp(currPrice, minPrice)) {
+                if (expressions.compare(currPrice, minPrice)) {
                     minPrice = currPrice;
                 }
-            } catch (Exception e) {
-            }
+            } catch (Exception e) { }
         }
 
         for (int i = 0; i < prices.getLength(); i++) {
@@ -115,5 +125,20 @@ public class ApplianceDAOImpl implements ApplianceDAO {
             }
         }
         return findAppliances;
+    }
+
+    /**
+     * Reads data from a XML-file into a Document.
+     * @return document with read data.
+     */
+    private Document getDocument() {
+        Document document = null;
+        try {
+            DocumentBuilder documentBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
+            document = documentBuilder.parse(XML_PATH);
+        } catch (ParserConfigurationException | SAXException | IOException ex) {
+            ex.printStackTrace(System.out);
+        }
+        return document;
     }
 }

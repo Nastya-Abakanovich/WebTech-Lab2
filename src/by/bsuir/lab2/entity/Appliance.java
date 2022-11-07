@@ -1,13 +1,9 @@
 package by.bsuir.lab2.entity;
 
-
-import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
-import java.io.Serializable;
-
-public class Appliance implements Serializable {
+public class Appliance{
     private String companyName;
     private String modelName;
     private double price;
@@ -41,26 +37,12 @@ public class Appliance implements Serializable {
             String value = nodes.item(i).getTextContent();
 
             switch (field) {
-                case "companyName":
-                    companyName = value;
-                    break;
-                case "modelName":
-                    modelName = value;
-                    break;
-                case "price":
-                    price = Double.parseDouble(value);
-                    break;
-                case "warrantyTime":
-                    warrantyTime = Double.parseDouble(value);
-                    break;
+                case "companyName" -> companyName = value;
+                case "modelName" -> modelName = value;
+                case "price" -> price = Double.parseDouble(value);
+                case "warrantyTime" -> warrantyTime = Double.parseDouble(value);
             }
         }
-
-//        Document doc = appliance.getOwnerDocument();
-//        companyName = doc.getElementsByTagName("companyName").item(0).getTextContent();
-//        modelName = doc.getElementsByTagName("modelName").item(0).getFirstChild().getNodeValue();
-//        price = Double.parseDouble(doc.getElementsByTagName("price").item(0).getFirstChild().getNodeValue());
-//        warrantyTime = Double.parseDouble(doc.getElementsByTagName("warrantyTime").item(0).getFirstChild().getNodeValue());
     }
 
     public String getCompanyName() {

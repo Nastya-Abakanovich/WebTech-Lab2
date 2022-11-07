@@ -1,6 +1,5 @@
 package by.bsuir.lab2.entity;
 
-
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
@@ -31,7 +30,8 @@ public class Laptop extends Appliance {
         this.displayInchs = laptop.getDisplayInchs();
     }
 
-    public Laptop(Appliance appliance, double batteryCapacity, String OS, int memoryRom, int systemMemory, double CPU, double displayInchs) {
+    public Laptop(Appliance appliance, double batteryCapacity, String OS, int memoryRom, int systemMemory,
+                  double CPU, double displayInchs) {
         super(appliance);
         this.batteryCapacity = batteryCapacity;
         this.os = OS;
@@ -41,7 +41,8 @@ public class Laptop extends Appliance {
         this.displayInchs = displayInchs;
     }
 
-    public Laptop(String companyName, String modelName, double price, double warrantyTime, double batteryCapacity, String OS, int memoryRom, int systemMemory, double CPU, double displayInchs) {
+    public Laptop(String companyName, String modelName, double price, double warrantyTime, double batteryCapacity,
+                  String OS, int memoryRom, int systemMemory, double CPU, double displayInchs) {
         super(companyName, modelName, price, warrantyTime);
         this.batteryCapacity = batteryCapacity;
         this.os = OS;
@@ -59,29 +60,17 @@ public class Laptop extends Appliance {
             String value = nodes.item(i).getTextContent();
 
             switch (field) {
-                case "batteryCapacity":
-                    batteryCapacity = Double.parseDouble(value);
-                    break;
-                case "os":
-                    os = value;
-                    break;
-                case "memoryRom":
-                    memoryRom = Integer.parseInt(value);
-                    break;
-                case "systemMemory":
-                    systemMemory = Integer.parseInt(value);
-                    break;
-                case "cpu":
-                    cpu = Double.parseDouble(value);
-                    break;
-                case "displayInchs":
-                    displayInchs = Double.parseDouble(value);
-                    break;
+                case "batteryCapacity" -> batteryCapacity = Double.parseDouble(value);
+                case "os" -> os = value;
+                case "memoryRom" -> memoryRom = Integer.parseInt(value);
+                case "systemMemory" -> systemMemory = Integer.parseInt(value);
+                case "cpu" -> cpu = Double.parseDouble(value);
+                case "displayInchs" -> displayInchs = Double.parseDouble(value);
             }
         }
     }
 
-        public double getBatteryCapacity() {
+    public double getBatteryCapacity() {
         return this.batteryCapacity;
     }
 

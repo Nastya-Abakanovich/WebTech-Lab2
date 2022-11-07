@@ -1,6 +1,5 @@
 package by.bsuir.lab2.entity;
 
-
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
@@ -31,7 +30,8 @@ public class Oven extends Appliance {
         this.width = oven.getWidth();
     }
 
-    public Oven(Appliance appliance, double powerConsumption, double weight, double capacity, double depth, double height, double width) {
+    public Oven(Appliance appliance, double powerConsumption, double weight, double capacity,
+                double depth, double height, double width) {
         super(appliance);
         this.powerConsumption = powerConsumption;
         this.weight = weight;
@@ -41,7 +41,8 @@ public class Oven extends Appliance {
         this.width = width;
     }
 
-    public Oven(String companyName, String modelName, double price, double warrantyTime, double powerConsumption, double weight, double capacity, double depth, double height, double width) {
+    public Oven(String companyName, String modelName, double price, double warrantyTime, double powerConsumption,
+                double weight, double capacity, double depth, double height, double width) {
         super(companyName, modelName, price, warrantyTime);
         this.powerConsumption = powerConsumption;
         this.weight = weight;
@@ -59,29 +60,17 @@ public class Oven extends Appliance {
             String value = nodes.item(i).getTextContent();
 
             switch (field) {
-                case "powerConsumption":
-                    powerConsumption = Double.parseDouble(value);
-                    break;
-                case "weight":
-                    weight = Double.parseDouble(value);
-                    break;
-                case "capacity":
-                    capacity = Double.parseDouble(value);
-                    break;
-                case "depth":
-                    depth = Double.parseDouble(value);
-                    break;
-                case "height":
-                    height = Double.parseDouble(value);
-                    break;
-                case "width":
-                    width = Double.parseDouble(value);
-                    break;
+                case "powerConsumption" -> powerConsumption = Double.parseDouble(value);
+                case "weight" -> weight = Double.parseDouble(value);
+                case "capacity" -> capacity = Double.parseDouble(value);
+                case "depth" -> depth = Double.parseDouble(value);
+                case "height" -> height = Double.parseDouble(value);
+                case "width" -> width = Double.parseDouble(value);
             }
         }
     }
 
-        public double getPowerConsumption() {
+    public double getPowerConsumption() {
         return this.powerConsumption;
     }
 

@@ -1,8 +1,5 @@
 package by.bsuir.lab2.entity;
 
-
-import org.w3c.dom.Document;
-import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
@@ -35,7 +32,8 @@ public class Kettle extends Appliance {
         this.weight = weight;
     }
 
-    public Kettle(String companyName, String modelName, double price, double warrantyTime, double volume, double powerConsumption, double cordLength, double weight) {
+    public Kettle(String companyName, String modelName, double price, double warrantyTime, double volume,
+                  double powerConsumption, double cordLength, double weight) {
         super(companyName, modelName, price, warrantyTime);
         this.volume = volume;
         this.powerConsumption = powerConsumption;
@@ -51,29 +49,12 @@ public class Kettle extends Appliance {
             String value = nodes.item(i).getTextContent();
 
             switch (field) {
-                case "volume":
-                    volume = Double.parseDouble(value);
-                    break;
-                case "powerConsumption":
-                    powerConsumption = Double.parseDouble(value);
-                    break;
-                case "cordLength":
-                    cordLength = Double.parseDouble(value);
-                    break;
-                case "weight":
-                    weight = Double.parseDouble(value);
-                    break;
+                case "volume" -> volume = Double.parseDouble(value);
+                case "powerConsumption" -> powerConsumption = Double.parseDouble(value);
+                case "cordLength" -> cordLength = Double.parseDouble(value);
+                case "weight" -> weight = Double.parseDouble(value);
             }
         }
-
-
-//        super(appliance);
-//
-//        Document doc = appliance.getOwnerDocument();
-//        volume = Double.parseDouble(doc.getElementsByTagName("volume").item(0).getFirstChild().getNodeValue());
-//        powerConsumption = Double.parseDouble(doc.getElementsByTagName("powerConsumption").item(0).getFirstChild().getNodeValue());
-//        cordLength = Double.parseDouble(doc.getElementsByTagName("cordLength").item(0).getFirstChild().getNodeValue());
-//        weight = Double.parseDouble(doc.getElementsByTagName("weight").item(0).getFirstChild().getNodeValue());
     }
 
     public double getVolume() {

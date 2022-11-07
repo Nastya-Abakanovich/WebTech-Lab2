@@ -1,6 +1,5 @@
 package by.bsuir.lab2.entity;
 
-
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
@@ -25,7 +24,8 @@ public class Speakers extends Appliance {
         this.cordLength = speakers.getCordLength();
     }
 
-    public Speakers(Appliance appliance, double powerConsumption, int numberOfSpeakers, int maxFrequencyRange, double cordLength) {
+    public Speakers(Appliance appliance, double powerConsumption, int numberOfSpeakers,
+                    int maxFrequencyRange, double cordLength) {
         super(appliance);
         this.powerConsumption = powerConsumption;
         this.numberOfSpeakers = numberOfSpeakers;
@@ -33,7 +33,8 @@ public class Speakers extends Appliance {
         this.cordLength = cordLength;
     }
 
-    public Speakers(String companyName, String modelName, double price, double warrantyTime, double powerConsumption, int numberOfSpeakers, int maxFrequencyRange, double cordLength) {
+    public Speakers(String companyName, String modelName, double price, double warrantyTime, double powerConsumption,
+                    int numberOfSpeakers, int maxFrequencyRange, double cordLength) {
         super(companyName, modelName, price, warrantyTime);
         this.powerConsumption = powerConsumption;
         this.numberOfSpeakers = numberOfSpeakers;
@@ -49,22 +50,15 @@ public class Speakers extends Appliance {
             String value = nodes.item(i).getTextContent();
 
             switch (field) {
-                case "powerConsumption":
-                    powerConsumption = Double.parseDouble(value);
-                    break;
-                case "numberOfSpeakers":
-                    numberOfSpeakers = Integer.parseInt(value);
-                    break;
-                case "maxFrequencyRange":
-                    maxFrequencyRange = Integer.parseInt(value);
-                    break;
-                case "cordLength":
-                    cordLength = Double.parseDouble(value);
-                    break;
+                case "powerConsumption" -> powerConsumption = Double.parseDouble(value);
+                case "numberOfSpeakers" -> numberOfSpeakers = Integer.parseInt(value);
+                case "maxFrequencyRange" -> maxFrequencyRange = Integer.parseInt(value);
+                case "cordLength" -> cordLength = Double.parseDouble(value);
             }
         }
     }
-        public double getPowerConsumption() {
+
+    public double getPowerConsumption() {
         return this.powerConsumption;
     }
 
