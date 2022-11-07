@@ -79,4 +79,13 @@ public class Speakers extends Appliance {
     public double getCordLength() {
         return this.cordLength;
     }
+
+    @Override
+    public String toString() {
+        return "Speakers: \n" + super.toString() +
+                "powerConsumption=" + powerConsumption + "W\n" +
+                "numberOfSpeakers=" + numberOfSpeakers + "\n" +
+                "maxFrequencyRange=" + maxFrequencyRange + "Hz\n" +
+                "cordLength=" + cordLength + "m\n";
+    }
 }

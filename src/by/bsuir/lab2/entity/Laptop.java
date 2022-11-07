@@ -104,5 +104,16 @@ public class Laptop extends Appliance {
     public double getDisplayInchs() {
         return this.displayInchs;
     }
+
+    @Override
+    public String toString() {
+        return "Laptop: \n" + super.toString() +
+                "batteryCapacity=" + batteryCapacity + "\n" +
+                "os=" + os + "\n" +
+                "memoryRom=" + memoryRom + "\n" +
+                "systemMemory=" + systemMemory + "\n" +
+                "cpu=" + cpu + "\n" +
+                "displayInchs=" + displayInchs + "\n";
+    }
 }
 

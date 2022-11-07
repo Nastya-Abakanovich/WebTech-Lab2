@@ -79,5 +79,11 @@ public class Appliance implements Serializable {
         return this.warrantyTime;
     }
 
+    @Override
+    public String toString() {
+        return companyName + " " + modelName + '\n' +
+                "price=" + price +  " BYN\n" +
+                "warrantyTime=" + warrantyTime + " months\n";
+    }
 }
 

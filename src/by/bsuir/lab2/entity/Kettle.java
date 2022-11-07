@@ -91,5 +91,14 @@ public class Kettle extends Appliance {
     public double getWeight() {
         return this.weight;
     }
+
+    @Override
+    public String toString() {
+        return "Kettle:\n" + super.toString() +
+                "volume=" + volume + "l\n" +
+                "powerConsumption=" + powerConsumption +  "W\n" +
+                "cordLength=" + cordLength +  "m\n" +
+                "weight=" + weight + "g\n";
+    }
 }
 
